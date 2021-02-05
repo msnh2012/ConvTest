@@ -297,7 +297,7 @@ void demo5()
                             {
                                 fVal = F[c*width*height + (m+i*strideY-padX)*width+(n+j*strideX-padY)];
                             }
-                            O[oc*outH*outW+i*outW+j]+=K[oc*outC*kSizeX*kSizeY+c*kSizeX*kSizeY+m*kSizeX+n]*fVal;
+                            O[oc*outH*outW+i*outW+j]+=K[oc*channel*kSizeX*kSizeY+c*kSizeX*kSizeY+m*kSizeX+n]*fVal;
                         }
                     }
                 }
@@ -373,7 +373,7 @@ void demo6()
                             {
                                 fVal = F[c*width*height + ((m+i*strideY)*dilationX-padX)*width+((n+j*strideX)*dilationY-padY)];
                             }
-                            O[oc*outH*outW+i*outW+j]+=K[oc*outC*kSizeX*kSizeY+c*kSizeX*kSizeY+m*kSizeX+n]*fVal;
+                            O[oc*outH*outW+i*outW+j]+=K[oc*channel*kSizeX*kSizeY+c*kSizeX*kSizeY+m*kSizeX+n]*fVal;
                         }
                     }
                 }
